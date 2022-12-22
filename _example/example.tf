@@ -5,11 +5,11 @@ provider "google" {
 }
 
 module "vpc" {
-  source      = "git::git@github.com:cloudlovers/terraform-gcp-vpc.git"
+  source = "git::git@github.com:cloudlovers/terraform-gcp-vpc.git"
 
   name                           = "vpc"
-  environment = var.environment
-  label_order = var.label_order
+  environment                    = var.environment
+  label_order                    = var.label_order
   google_compute_network_enabled = true
 }
 
